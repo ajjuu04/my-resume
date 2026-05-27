@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import './App.css';
 import Project from "./pages/Project";
@@ -119,10 +119,10 @@ function AppContent() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ParticleBackground />
       <AppContent />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
