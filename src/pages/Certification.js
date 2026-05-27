@@ -17,7 +17,7 @@ function Certification() {
           <span style={{ color: 'var(--accent-green)', fontWeight: '600' }}>CGPA: 8.2 / 10</span>
         </p>
         <ul className="styled-list">
-          <li>Final-year student specializing in software development and cloud computing</li>
+          <li>Completed BCA (2023–2026) with CGPA 8.2 · Awaiting final result</li>
           <li>Actively pursuing Oracle Cloud Infrastructure (OCI) certifications</li>
         </ul>
       </div>

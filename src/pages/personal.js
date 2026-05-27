@@ -27,7 +27,7 @@ function Personal() {
         </div>
         <div className="profile-info">
           <h1>Ajinkya Jambhulkar</h1>
-          <p className="profile-role">🎓 Final-Year BCA Student · Aspiring Software Developer</p>
+          <p className="profile-role">🎓 BCA Graduate (2026) · Aspiring Software Developer</p>
           <div className="contact-chips">
             <span className="contact-chip">
               <span className="chip-icon">📍</span> Nana Peth, Pune
@@ -67,10 +67,10 @@ function Personal() {
         <p className="section-title">About Me</p>
         <h2 className="section-heading">Professional Summary</h2>
         <p style={{ color: 'var(--text-secondary)', lineHeight: '1.9', fontSize: '0.925rem' }}>
-          Final-year BCA student with a strong interest in software development. Gained practical
+          BCA Graduate (2026) with a strong interest in software development. Gained practical
           understanding of the software lifecycle by building functional web applications & database systems.
-          Actively preparing for Oracle Cloud (OCI) certifications and strengthening core logic through
-          Data Structures and Algorithms (DSA) practice. Eager to learn new technologies and adapt quickly.
+          Holds Oracle Cloud Infrastructure (OCI) certifications and actively strengthening core logic
+          through Data Structures and Algorithms (DSA) practice. Eager to learn new technologies and adapt quickly.
         </p>
       </div>
 
