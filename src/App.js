@@ -97,16 +97,16 @@ function AppContent() {
         <div className="footer-content">
           <div className="footer-social-links">
             <a href="https://github.com/ajjuu04/" target="_blank" rel="noreferrer" className="footer-social-link" title="GitHub">
-              <img src="/New folder/github.png" alt="GitHub" className="social-logo" style={{ filter: 'invert(1)' }} />
+              <img src={`${process.env.PUBLIC_URL}/New folder/github.png`} alt="GitHub" className="social-logo" style={{ filter: 'invert(1)' }} />
             </a>
             <a href="https://www.linkedin.com/in/ajinkyajam/" target="_blank" rel="noreferrer" className="footer-social-link" title="LinkedIn">
-              <img src="/New folder/linkedin.png" alt="LinkedIn" className="social-logo" />
+              <img src={`${process.env.PUBLIC_URL}/New folder/linkedin.png`} alt="LinkedIn" className="social-logo" />
             </a>
             <a href="https://leetcode.com/u/ajjuu_04/" target="_blank" rel="noreferrer" className="footer-social-link" title="LeetCode">
-              <img src="/New folder/leetcode.png" alt="LeetCode" className="social-logo" />
+              <img src={`${process.env.PUBLIC_URL}/New folder/leetcode.png`} alt="LeetCode" className="social-logo" />
             </a>
             <a href="mailto:ajinkyajambhulkar1@gmail.com" className="footer-social-link" title="Email">
-              <img src="/New folder/email.png" alt="Email" className="social-logo" />
+              <img src={`${process.env.PUBLIC_URL}/New folder/email.png`} alt="Email" className="social-logo" />
             </a>
           </div>
           <p>© 2026 Ajinkya Jambhulkar · Built with React & ✨</p>

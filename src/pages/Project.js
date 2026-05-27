@@ -123,7 +123,7 @@ function Project() {
                 <p className="card-title">{project.name}</p>
                 <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
                   <a href={project.link} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
-                    <img src="/New folder/github.png" alt="GitHub" style={{ width: '14px', height: '14px', filter: 'invert(1)' }} /> {project.linkLabel} ↗
+                    <img src={`${process.env.PUBLIC_URL}/New folder/github.png`} alt="GitHub" style={{ width: '14px', height: '14px', filter: 'invert(1)' }} /> {project.linkLabel} ↗
                   </a>
                   {project.liveLink && (
                     <a href={project.liveLink} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem', color: 'var(--accent-green)' }}>

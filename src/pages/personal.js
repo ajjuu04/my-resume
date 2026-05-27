@@ -32,7 +32,7 @@ function Personal() {
           <div className="hello-bubble">Hello! 👋</div>
           <div className="profile-photo-wrapper">
             <img
-              src="/photo.jpeg"
+              src={`${process.env.PUBLIC_URL}/photo.jpeg`}
               alt="Ajinkya Jambhulkar"
               className="profile-photo"
             />
@@ -60,16 +60,16 @@ function Personal() {
                 <span className="chip-icon">📞</span> +91-9022007017
               </a>
               <a href="mailto:ajinkyajambhulkar1@gmail.com" className="contact-chip">
-                <img src="/New folder/email.png" alt="Email" className="chip-logo" /> ajinkyajambhulkar1@gmail.com
+                <img src={`${process.env.PUBLIC_URL}/New folder/email.png`} alt="Email" className="chip-logo" /> ajinkyajambhulkar1@gmail.com
               </a>
               <a href="https://www.linkedin.com/in/ajinkyajam/" target="_blank" rel="noreferrer" className="contact-chip">
-                <img src="/New folder/linkedin.png" alt="LinkedIn" className="chip-logo" /> LinkedIn
+                <img src={`${process.env.PUBLIC_URL}/New folder/linkedin.png`} alt="LinkedIn" className="chip-logo" /> LinkedIn
               </a>
               <a href="https://github.com/ajjuu04/" target="_blank" rel="noreferrer" className="contact-chip">
-                <img src="/New folder/github.png" alt="GitHub" className="chip-logo" style={{ filter: 'invert(1)' }} /> GitHub
+                <img src={`${process.env.PUBLIC_URL}/New folder/github.png`} alt="GitHub" className="chip-logo" style={{ filter: 'invert(1)' }} /> GitHub
               </a>
               <a href="https://leetcode.com/u/ajjuu_04/" target="_blank" rel="noreferrer" className="contact-chip">
-                <img src="/New folder/leetcode.png" alt="LeetCode" className="chip-logo" /> LeetCode
+                <img src={`${process.env.PUBLIC_URL}/New folder/leetcode.png`} alt="LeetCode" className="chip-logo" /> LeetCode
               </a>
             </div>
           </div>
@@ -134,7 +134,7 @@ function Personal() {
             </p>
           </div>
           <a href="https://www.linkedin.com/in/ajinkyajam/" target="_blank" rel="noreferrer" className="hire-btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.4rem' }}>
-            <img src="/New folder/linkedin.png" alt="LinkedIn" style={{ width: '16px', height: '16px' }} /> Hire Me on LinkedIn ↗
+            <img src={`${process.env.PUBLIC_URL}/New folder/linkedin.png`} alt="LinkedIn" style={{ width: '16px', height: '16px' }} /> Hire Me on LinkedIn ↗
           </a>
         </div>
       </ScrollReveal>

@@ -17,7 +17,7 @@ function Certification() {
       year: 'Oct 2025',
       color: 'tag-cyan',
       icon: '☁️',
-      logo: '/New folder/oracle.png'
+      logo: `${process.env.PUBLIC_URL}/New folder/oracle.png`
     },
     {
       title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
@@ -25,7 +25,7 @@ function Certification() {
       year: 'Sep 2025',
       color: 'tag-cyan',
       icon: '☁️',
-      logo: '/New folder/oracle.png'
+      logo: `${process.env.PUBLIC_URL}/New folder/oracle.png`
     },
     {
       title: 'Core Java Programming',
