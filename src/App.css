@@ -1442,20 +1442,358 @@ body {
 /* ========================================
    RESPONSIVE
    ======================================== */
+/* ========================================
+   RESPONSIVE — TABLET (max-width: 768px)
+   ======================================== */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .currently-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-heading {
+    font-size: 1.75rem;
+  }
+
+  .profile-hero {
+    padding: 1.75rem;
+    gap: 1.5rem;
+  }
+
+  .profile-info h1 {
+    font-size: 1.75rem;
+  }
+
+  .open-to-work-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+  }
+
+  .card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — MOBILE (max-width: 640px)
+   ======================================== */
 @media (max-width: 640px) {
+  /* --- Navbar: horizontal scroll on mobile --- */
+  .navbar {
+    padding: 0 0.75rem;
+    height: 56px;
+    gap: 0.5rem;
+  }
+
+  .navbar-brand {
+    font-size: 1rem;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .nav-links {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    flex-wrap: nowrap;
+    gap: 0.15rem;
+    padding-right: 0.5rem;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .nav-links li {
+    flex-shrink: 0;
+  }
+
+  .nav-links a {
+    padding: 0.35rem 0.55rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
+    border-radius: 6px;
+  }
+
+  /* --- Profile Hero --- */
   .profile-hero {
     flex-direction: column;
     text-align: center;
+    padding: 1.5rem 1.25rem;
+    border-radius: 16px;
+    gap: 1rem;
   }
-  .contact-chips { justify-content: center; }
-  .navbar { padding: 0 1rem; }
-  .nav-links a { padding: 0.4rem 0.6rem; font-size: 0.8rem; }
-  .navbar-brand { font-size: 1.1rem; }
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .currently-grid { grid-template-columns: 1fr; }
-  .open-to-work-banner { flex-direction: column; text-align: center; }
-  .hello-bubble { display: none; }
-  .marquee-item { font-size: 0.8rem; letter-spacing: 1px; }
-  .section-heading { font-size: 1.75rem; }
-  .snap-hint { bottom: 12px; right: 12px; font-size: 0.72rem; }
+
+  .profile-photo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .profile-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile-info .profile-role {
+    font-size: 0.82rem;
+  }
+
+  .contact-chips {
+    justify-content: center;
+    gap: 0.35rem;
+  }
+
+  .contact-chip {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.7rem;
+  }
+
+  .hello-bubble {
+    display: none;
+  }
+
+  .waving-hand {
+    font-size: 1.5rem;
+  }
+
+  /* --- Stats --- */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem;
+  }
+
+  .stat-card {
+    padding: 1rem 0.75rem;
+    border-radius: 14px;
+  }
+
+  .stat-icon {
+    font-size: 1.3rem;
+  }
+
+  .stat-value {
+    font-size: 1.4rem;
+  }
+
+  .stat-label {
+    font-size: 0.65rem;
+  }
+
+  /* --- Cards --- */
+  .card {
+    padding: 1.15rem;
+    border-radius: 14px;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.78rem;
+  }
+
+  /* --- Section headers --- */
+  .section-heading {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-title {
+    font-size: 0.65rem;
+    letter-spacing: 3px;
+  }
+
+  /* --- Marquee --- */
+  .marquee-container {
+    padding: 0.75rem 0;
+    margin-top: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .marquee-item {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    gap: 0.5rem;
+  }
+
+  .marquee-track {
+    gap: 1.5rem;
+  }
+
+  /* --- Tags --- */
+  .tag {
+    padding: 0.18rem 0.5rem;
+    font-size: 0.65rem;
+    border-radius: 5px;
+  }
+
+  /* --- Lists --- */
+  .styled-list li {
+    font-size: 0.8rem;
+    padding-left: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  /* --- Currently Learning --- */
+  .currently-grid {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .currently-item {
+    padding: 0.7rem 0.85rem;
+    border-radius: 10px;
+  }
+
+  .currently-emoji {
+    font-size: 1.1rem;
+  }
+
+  /* --- Open to Work --- */
+  .open-to-work-banner {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.15rem;
+    gap: 1rem;
+    border-radius: 14px;
+  }
+
+  .hire-btn {
+    padding: 0.55rem 1.2rem;
+    font-size: 0.8rem;
+    border-radius: 10px;
+  }
+
+  /* --- Skills --- */
+  .skill-category {
+    padding: 1.15rem;
+    border-radius: 14px;
+  }
+
+  .skill-category-label {
+    font-size: 0.65rem;
+  }
+
+  /* --- Achievement --- */
+  .achievement-card {
+    padding: 1.15rem;
+    border-radius: 14px;
+    gap: 0.75rem;
+  }
+
+  .achievement-icon {
+    font-size: 1.75rem;
+  }
+
+  /* --- Footer --- */
+  .page-footer {
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+  }
+
+  .footer-social-links {
+    gap: 0.75rem;
+  }
+
+  .footer-social-link {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .footer-social-link .social-logo {
+    width: 17px;
+    height: 17px;
+  }
+
+  /* --- Snap Hint --- */
+  .snap-hint {
+    bottom: 10px;
+    right: 10px;
+    left: 10px;
+    font-size: 0.7rem;
+    padding: 0.6rem 1rem;
+    border-radius: 10px;
+  }
+
+  /* --- Divider --- */
+  .divider {
+    margin: 1.5rem 0;
+  }
+
+  /* --- Cert logo --- */
+  .cert-logo {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* --- Gradient orbs scale down --- */
+  .gradient-orb-1 {
+    width: 150px;
+    height: 150px;
+  }
+  .gradient-orb-2 {
+    width: 100px;
+    height: 100px;
+  }
 }
+
+/* ========================================
+   RESPONSIVE — VERY SMALL (max-width: 380px)
+   ======================================== */
+@media (max-width: 380px) {
+  .navbar-brand {
+    font-size: 0.85rem;
+  }
+
+  .nav-links a {
+    padding: 0.3rem 0.45rem;
+    font-size: 0.65rem;
+  }
+
+  .profile-photo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .profile-info h1 {
+    font-size: 1.25rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .stat-value {
+    font-size: 1.2rem;
+  }
+
+  .section-heading {
+    font-size: 1.3rem;
+  }
+
+  .contact-chip {
+    font-size: 0.65rem;
+    padding: 0.25rem 0.5rem;
+  }
+
+  .chip-logo {
+    width: 14px;
+    height: 14px;
+  }
+}
+
