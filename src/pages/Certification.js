@@ -1,24 +1,78 @@
-function Certification(){
-    return(
-        <div>
-            <div>
-            <hr/>
-            <h4 className="my-3">EDUCATION</h4>
-            <h6 className="fw-bold">Bachelor of Computer Applications (BCA) | 2023 - 2026</h6>
-            <p>Savitribai Phule Pune University, India &nbsp;&nbsp;|&nbsp;&nbsp;<span className="fw-bold">Current CGPA : </span>8.2 / 10</p>
-            <hr/>
-            <h4 className="my-3">CERTIFICATIONS</h4>
-            
-                <ul>
-                    <li>Web Development Certification (Ongoing) - Sponsored by ITC INFOTECH & NASSCOM Foundation (2026)</li>
-                    <li>Oracle Cloud Infrastructure 2025 Certified Architect Associate - Oracle (Oct 2025)</li>
-                    <li>Oracle Cloud Infrastructure 2025 Certified Foundations Associate - Oracle (Sep 2025)</li>
-                    <li>Core Java Programming - True Coders Academy (Aug 2024)</li>
-                </ul>
-            
+function Certification() {
+  return (
+    <div>
+      {/* Education */}
+      <p className="section-title">Academic Background</p>
+      <h2 className="section-heading">Education</h2>
+
+      <div className="card">
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem' }}>
+          <div>
+            <p className="card-title">Bachelor of Computer Applications (BCA)</p>
+            <p className="card-subtitle">Savitribai Phule Pune University, India</p>
+          </div>
+          <span className="tag tag-cyan">2023 – 2026</span>
         </div>
+        <p className="card-meta">
+          <span style={{ color: 'var(--accent-green)', fontWeight: '600' }}>CGPA: 8.2 / 10</span>
+        </p>
+        <ul className="styled-list">
+          <li>Final-year student specializing in software development and cloud computing</li>
+          <li>Actively pursuing Oracle Cloud Infrastructure (OCI) certifications</li>
+        </ul>
+      </div>
+
+      <div className="divider"></div>
+
+      {/* Certifications */}
+      <p className="section-title">Credentials</p>
+      <h2 className="section-heading">Certifications</h2>
+
+      {[
+        {
+          title: 'Web Development Certification (Ongoing)',
+          issuer: 'ITC INFOTECH & NASSCOM Foundation',
+          year: '2026',
+          color: 'tag-purple',
+          icon: '🌐'
+        },
+        {
+          title: 'Oracle Cloud Infrastructure 2025 Certified Architect Associate',
+          issuer: 'Oracle',
+          year: 'Oct 2025',
+          color: 'tag-cyan',
+          icon: '☁️'
+        },
+        {
+          title: 'Oracle Cloud Infrastructure 2025 Certified Foundations Associate',
+          issuer: 'Oracle',
+          year: 'Sep 2025',
+          color: 'tag-cyan',
+          icon: '☁️'
+        },
+        {
+          title: 'Core Java Programming',
+          issuer: 'True Coders Academy',
+          year: 'Aug 2024',
+          color: 'tag-green',
+          icon: '☕'
+        },
+      ].map((cert, i) => (
+        <div className="card" key={i}>
+          <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1rem' }}>
+            <span style={{ fontSize: '1.5rem' }}>{cert.icon}</span>
+            <div style={{ flex: 1 }}>
+              <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem' }}>
+                <p className="card-title">{cert.title}</p>
+                <span className={`tag ${cert.color}`}>{cert.year}</span>
+              </div>
+              <p className="card-subtitle">{cert.issuer}</p>
+            </div>
+          </div>
         </div>
-    )
+      ))}
+    </div>
+  );
 }
 
 export default Certification;
