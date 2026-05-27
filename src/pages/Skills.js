@@ -1,3 +1,6 @@
+import { FloatingText } from '../components/AnimatedText';
+import { AnimatedCard, ScrollReveal } from '../components/AnimatedCard';
+
 function Skills() {
   const categories = [
     {
@@ -34,21 +37,25 @@ function Skills() {
 
   return (
     <div>
-      <p className="section-title">What I Know</p>
-      <h2 className="section-heading">Skills</h2>
+      <ScrollReveal direction="left">
+        <p className="section-title">What I Know</p>
+        <h2 className="section-heading">
+          <FloatingText text="Skills" delay={200} />
+        </h2>
+      </ScrollReveal>
 
       <div className="skills-grid">
         {categories.map((cat, i) => (
-          <div className="skill-category" key={i}>
+          <AnimatedCard className="skill-category" key={i} delay={i * 100}>
             <p className="skill-category-label" style={{ color: cat.labelColor }}>
               {cat.label}
             </p>
-            <div>
+            <div className="stagger-children">
               {cat.skills.map(skill => (
                 <span key={skill} className={`tag ${cat.color}`}>{skill}</span>
               ))}
             </div>
-          </div>
+          </AnimatedCard>
         ))}
       </div>
     </div>

@@ -1,3 +1,6 @@
+import { FloatingText } from '../components/AnimatedText';
+import { AnimatedCard, ScrollReveal } from '../components/AnimatedCard';
+
 function Project() {
   const projects = [
     {
@@ -100,25 +103,27 @@ function Project() {
 
   return (
     <div>
-      <p className="section-title">What I've Built</p>
-      <h2 className="section-heading">
-        Projects{' '}
-        <span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: '400' }}>
-          ({projects.length})
-        </span>
-      </h2>
+      <ScrollReveal direction="left">
+        <p className="section-title">What I've Built</p>
+        <h2 className="section-heading">
+          <FloatingText text="Projects" delay={200} />{' '}
+          <span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: '400' }}>
+            ({projects.length})
+          </span>
+        </h2>
+      </ScrollReveal>
 
       {projects.map((project, i) => (
-        <div className="card" key={i}>
+        <AnimatedCard className="card" key={i} delay={i * 80}>
           {/* Header Row */}
           <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-              <span style={{ fontSize: '1.75rem' }}>{project.icon}</span>
+              <span style={{ fontSize: '1.75rem', animation: 'gentleFloat 3s ease-in-out infinite', animationDelay: `${i * 0.3}s` }}>{project.icon}</span>
               <div>
                 <p className="card-title">{project.name}</p>
                 <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
-                  <a href={project.link} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem' }}>
-                    🐙 {project.linkLabel} ↗
+                  <a href={project.link} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem', display: 'inline-flex', alignItems: 'center', gap: '0.3rem' }}>
+                    <img src="/New folder/github.png" alt="GitHub" style={{ width: '14px', height: '14px', filter: 'invert(1)' }} /> {project.linkLabel} ↗
                   </a>
                   {project.liveLink && (
                     <a href={project.liveLink} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem', color: 'var(--accent-green)' }}>
@@ -149,7 +154,7 @@ function Project() {
               <li key={j}>{point}</li>
             ))}
           </ul>
-        </div>
+        </AnimatedCard>
       ))}
     </div>
   );

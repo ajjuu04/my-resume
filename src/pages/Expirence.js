@@ -1,10 +1,17 @@
+import { FloatingText } from '../components/AnimatedText';
+import { AnimatedCard, ScrollReveal } from '../components/AnimatedCard';
+
 function Expirence() {
   return (
     <div>
-      <p className="section-title">Work History</p>
-      <h2 className="section-heading">Experience</h2>
+      <ScrollReveal direction="left">
+        <p className="section-title">Work History</p>
+        <h2 className="section-heading">
+          <FloatingText text="Experience" delay={200} />
+        </h2>
+      </ScrollReveal>
 
-      <div className="card">
+      <AnimatedCard className="card" delay={100}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.75rem' }}>
           <div>
             <p className="card-title">Junior Graphic Designer</p>
@@ -36,7 +43,7 @@ function Expirence() {
             production-level data systems and digital asset management at scale.
           </li>
         </ul>
-      </div>
+      </AnimatedCard>
     </div>
   );
 }

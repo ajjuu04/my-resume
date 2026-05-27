@@ -1,3 +1,6 @@
+import { FloatingText } from '../components/AnimatedText';
+import { AnimatedCard, ScrollReveal } from '../components/AnimatedCard';
+
 function Achivements() {
   const achievements = [
     {
@@ -18,11 +21,15 @@ function Achivements() {
 
   return (
     <div>
-      <p className="section-title">Milestones</p>
-      <h2 className="section-heading">Achievements</h2>
+      <ScrollReveal direction="left">
+        <p className="section-title">Milestones</p>
+        <h2 className="section-heading">
+          <FloatingText text="Achievements" delay={200} vanish={true} />
+        </h2>
+      </ScrollReveal>
 
       {achievements.map((item, i) => (
-        <div className="achievement-card" key={i}>
+        <AnimatedCard className="achievement-card" key={i} delay={i * 150}>
           <span className="achievement-icon">{item.icon}</span>
           <div style={{ flex: 1 }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '0.4rem' }}>
@@ -31,7 +38,7 @@ function Achivements() {
             </div>
             <p style={{ fontSize: '0.875rem', color: 'var(--text-secondary)', lineHeight: '1.6' }}>{item.description}</p>
           </div>
-        </div>
+        </AnimatedCard>
       ))}
     </div>
   );
