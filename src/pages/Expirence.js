@@ -16,13 +16,25 @@ function Expirence() {
         <div style={{ marginBottom: '1rem' }}>
           <span className="tag tag-green">Full-time</span>
           <span className="tag tag-cyan">Design & Automation</span>
+          <span className="tag tag-cyan">E-commerce</span>
         </div>
 
         <ul className="styled-list">
-          <li>Managed website catalog uploads and optimized digital assets for e-commerce platforms</li>
-          <li>Developed automation scripts (using PowerShell/ExtendScript) to batch-process catalog images, reducing manual data entry time by <strong style={{ color: 'var(--accent-green)' }}>40%</strong></li>
-          <li>Improved catalog accuracy and performance through structured data handling</li>
-          <li>Supported AI-driven image processing initiatives using technical and creative inputs</li>
+          <li>Managed website catalog uploads and optimized digital assets for e-commerce platforms.</li>
+          <li>
+            Developed automation scripts (using PowerShell/ExtendScript) to batch-process catalog images,
+            reducing manual data entry time by{' '}
+            <strong style={{ color: 'var(--accent-green)' }}>40%</strong>.
+          </li>
+          <li>Improved catalog accuracy and performance through structured data handling.</li>
+          <li>
+            Collaborated on AI-driven image processing pipelines, contributing technical scripting inputs
+            to automate asset handling workflows using ExtendScript and PowerShell.
+          </li>
+          <li>
+            Worked in a large-scale e-commerce tech environment (BrainBees/FirstCry), gaining exposure to
+            production-level data systems and digital asset management at scale.
+          </li>
         </ul>
       </div>
     </div>

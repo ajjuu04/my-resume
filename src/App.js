@@ -19,7 +19,7 @@ function NavBar() {
   ];
   return (
     <nav className="navbar">
-      <span className="navbar-brand">AJ Portfolio</span>
+      <span className="navbar-brand">Ajinkya's Portfolio</span>
       <ul className="nav-links">
         {links.map(link => (
           <li key={link.to}>
@@ -36,20 +36,22 @@ function NavBar() {
 function App() {
   return (
     <BrowserRouter>
-      <NavBar />
-      <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Personal />} />
-          <Route path="/Certification" element={<Certification />} />
-          <Route path="/Skills" element={<Skills />} />
-          <Route path="/Expirence" element={<Expirence />} />
-          <Route path="/Project" element={<Project />} />
-          <Route path="/Achivements" element={<Achivements />} />
-        </Routes>
-      </main>
-      <footer className="page-footer">
-        © 2026 Ajinkya Jambhulkar · Built with React
-      </footer>
+      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+        <NavBar />
+        <main className="main-content" style={{ flex: 1 }}>
+          <Routes>
+            <Route path="/" element={<Personal />} />
+            <Route path="/Certification" element={<Certification />} />
+            <Route path="/Skills" element={<Skills />} />
+            <Route path="/Expirence" element={<Expirence />} />
+            <Route path="/Project" element={<Project />} />
+            <Route path="/Achivements" element={<Achivements />} />
+          </Routes>
+        </main>
+        <footer className="page-footer">
+          © 2026 Ajinkya Jambhulkar · Built with React
+        </footer>
+      </div>
     </BrowserRouter>
   );
 }

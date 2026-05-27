@@ -98,7 +98,7 @@ function Personal() {
             Actively looking for internships and entry-level roles in software development, web development, or cloud computing.
           </p>
         </div>
-        <a href="mailto:ajinkyajambhulkar1@gmail.com" className="hire-btn">Hire Me ↗</a>
+        <a href="https://www.linkedin.com/in/ajinkyajam/" target="_blank" rel="noreferrer" className="hire-btn">Hire Me on LinkedIn ↗</a>
       </div>
     </div>
   );
