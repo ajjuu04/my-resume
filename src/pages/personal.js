@@ -2,7 +2,7 @@ function Personal() {
   const stats = [
     { value: '8.2', label: 'CGPA', icon: '🎓', color: 'var(--accent-green)' },
     { value: '2+', label: 'Years Experience', icon: '💼', color: 'var(--accent-cyan)' },
-    { value: '2', label: 'Projects Built', icon: '🚀', color: 'var(--accent-primary)' },
+    { value: '10+', label: 'Big & Mini Projects', icon: '🚀', color: 'var(--accent-primary)' },
     { value: '4', label: 'Certifications', icon: '📜', color: 'var(--accent-secondary)' },
   ];
 
