@@ -6,7 +6,7 @@ function Project() {
       linkLabel: 'GitHub Repo',
       liveLink: null,
       tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
-      badge: 'BCA Sem 3 Project',
+      badge: 'BCA Semester 3',
       icon: '🩸',
       color: 'tag-purple',
       points: [
@@ -22,7 +22,7 @@ function Project() {
       linkLabel: 'GitHub Repo',
       liveLink: 'https://busbooking.wuaze.com/',
       tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
-      badge: 'BCA Sem 3 Project',
+      badge: 'BCA Semester 4',
       icon: '🚌',
       color: 'tag-cyan',
       points: [
@@ -33,28 +33,12 @@ function Project() {
       ]
     },
     {
-      name: 'Word Scramble — Browser Word Game',
-      link: 'https://github.com/ajjuu04/word-scramble',
-      linkLabel: 'GitHub Repo',
-      liveLink: 'https://ajjuu04.github.io/word-scramble/',
-      tech: ['HTML', 'CSS', 'JavaScript', 'JSON'],
-      badge: 'Personal Project · Deployed',
-      icon: '🔤',
-      color: 'tag-green',
-      points: [
-        'Built a fully browser-based word scramble game with start screen, win & loss graphics.',
-        'Implemented correct timer logic and scramble algorithm for smooth gameplay.',
-        'Loaded 100+ words dynamically from a words.json file using the Fetch API.',
-        'Added celebration GIF animations and separate CSS theming for win/loss states.',
-      ]
-    },
-    {
       name: 'Fruit Bazzar — E-commerce Website',
       link: 'https://github.com/ajjuu04/Fruit-Bazzar-Ecommerce',
       linkLabel: 'GitHub Repo',
       liveLink: null,
       tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
-      badge: 'E-commerce Project',
+      badge: 'BCA Semester 5',
       icon: '🍎',
       color: 'tag-purple',
       points: [
@@ -70,7 +54,7 @@ function Project() {
       linkLabel: 'GitHub Repo',
       liveLink: null,
       tech: ['HTML', 'CSS', 'JavaScript', 'MySQL', 'Bootstrap'],
-      badge: 'E-commerce Project',
+      badge: 'BCA Semester 6',
       icon: '💍',
       color: 'tag-cyan',
       points: [
@@ -80,12 +64,49 @@ function Project() {
         'Managed backend database for inventory and product data management.',
       ]
     },
+    {
+      name: 'Word Scramble — Browser Word Game',
+      link: 'https://github.com/ajjuu04/word-scramble',
+      linkLabel: 'GitHub Repo',
+      liveLink: 'https://ajjuu04.github.io/word-scramble/',
+      tech: ['HTML', 'CSS', 'JavaScript', 'JSON'],
+      badge: 'Learning · GitHub Practice',
+      icon: '🔤',
+      color: 'tag-green',
+      points: [
+        'Built a fully browser-based word scramble game to practice vanilla JavaScript & GitHub workflows.',
+        'Implemented timer logic, scramble algorithm, and win/loss screen graphics.',
+        'Loaded 100+ words dynamically from a words.json file using the Fetch API.',
+        'Deployed live using GitHub Actions & GitHub Pages as a CI/CD learning exercise.',
+      ]
+    },
+    {
+      name: 'My Resume — React Portfolio Website',
+      link: 'https://github.com/ajjuu04/my-resume',
+      linkLabel: 'GitHub Repo',
+      liveLink: null,
+      tech: ['React', 'JavaScript', 'CSS', 'React Router'],
+      badge: 'Learning · React & AI',
+      icon: '🧑‍💻',
+      color: 'tag-green',
+      points: [
+        'Built this portfolio resume app using React.js to learn component-based architecture.',
+        'Implemented multi-page navigation with React Router for a smooth SPA experience.',
+        'Explored AI-assisted development to enhance UI design and coding workflow.',
+        'Applied modern CSS techniques including dark theme, glassmorphism, and micro-animations.',
+      ]
+    },
   ];
 
   return (
     <div>
       <p className="section-title">What I've Built</p>
-      <h2 className="section-heading">Projects <span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: '400' }}>({projects.length})</span></h2>
+      <h2 className="section-heading">
+        Projects{' '}
+        <span style={{ fontSize: '1rem', color: 'var(--text-muted)', fontWeight: '400' }}>
+          ({projects.length})
+        </span>
+      </h2>
 
       {projects.map((project, i) => (
         <div className="card" key={i}>
@@ -95,7 +116,7 @@ function Project() {
               <span style={{ fontSize: '1.75rem' }}>{project.icon}</span>
               <div>
                 <p className="card-title">{project.name}</p>
-                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.2rem' }}>
+                <div style={{ display: 'flex', gap: '0.75rem', flexWrap: 'wrap', marginTop: '0.25rem' }}>
                   <a href={project.link} target="_blank" rel="noreferrer" className="accent-link" style={{ fontSize: '0.8rem' }}>
                     🐙 {project.linkLabel} ↗
                   </a>
@@ -107,7 +128,12 @@ function Project() {
                 </div>
               </div>
             </div>
-            <span className="tag tag-green" style={{ flexShrink: 0 }}>{project.badge}</span>
+            <span
+              className={`tag ${project.badge.startsWith('Learning') ? 'tag-green' : 'tag-purple'}`}
+              style={{ flexShrink: 0 }}
+            >
+              {project.badge}
+            </span>
           </div>
 
           {/* Tech Stack */}
